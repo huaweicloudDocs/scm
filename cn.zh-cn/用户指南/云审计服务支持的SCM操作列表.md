@@ -92,13 +92,6 @@ SSL证书管理通过云审计服务（Cloud Trace Service，CTS）为用户提�
 <td class="cellrowborder" valign="top" width="43.215678432156786%" headers="mcps1.2.4.1.3 "><p id="zh-cn_topic_0110866155_p45071038122811"><a name="zh-cn_topic_0110866155_p45071038122811"></a><a name="zh-cn_topic_0110866155_p45071038122811"></a>pushScmCertToELB</p>
 </td>
 </tr>
-<tr id="zh-cn_topic_0110866155_row13397311301"><td class="cellrowborder" valign="top" width="29.967003299670036%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0110866155_p103910318300"><a name="zh-cn_topic_0110866155_p103910318300"></a><a name="zh-cn_topic_0110866155_p103910318300"></a>取消推送证书到ELB</p>
-</td>
-<td class="cellrowborder" valign="top" width="26.817318268173185%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0110866155_p23912311302"><a name="zh-cn_topic_0110866155_p23912311302"></a><a name="zh-cn_topic_0110866155_p23912311302"></a>scm</p>
-</td>
-<td class="cellrowborder" valign="top" width="43.215678432156786%" headers="mcps1.2.4.1.3 "><p id="zh-cn_topic_0110866155_p10396363016"><a name="zh-cn_topic_0110866155_p10396363016"></a><a name="zh-cn_topic_0110866155_p10396363016"></a>unpushScmCertToELB</p>
-</td>
-</tr>
 </tbody>
 </table>
 
