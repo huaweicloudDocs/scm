@@ -48,6 +48,3 @@
 **图 1**  查看项目ID<a name="zh-cn_topic_0101662393_fig48412424201120"></a>  
 ![](figures/查看项目ID.png "查看项目ID")
 
-**图 2**  查看项目ID<a name="zh-cn_topic_0101662393_fig39324824103512"></a>  
-![](figures/查看项目ID-1.jpg "查看项目ID-1")
-
