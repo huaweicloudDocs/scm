@@ -142,7 +142,7 @@
     </tr>
     <tr id="row1146216480154"><td class="cellrowborder" valign="top" width="25.619999999999997%" headers="mcps1.2.3.1.1 "><p id="p5462164801519"><a name="p5462164801519"></a><a name="p5462164801519"></a>server_name</p>
     </td>
-    <td class="cellrowborder" valign="top" width="74.38%" headers="mcps1.2.3.1.2 "><p id="p24621348171514"><a name="p24621348171514"></a><a name="p24621348171514"></a>证书绑定的域名。示例：www.domain.com</p>
+    <td class="cellrowborder" valign="top" width="74.38%" headers="mcps1.2.3.1.2 "><p id="p24621348171514"><a name="p24621348171514"></a><a name="p24621348171514"></a>证书绑定的域名。示例：www<span>.</span>domain.com</p>
     </td>
     </tr>
     <tr id="row11462848191514"><td class="cellrowborder" valign="top" width="25.619999999999997%" headers="mcps1.2.3.1.1 "><p id="p1246254871516"><a name="p1246254871516"></a><a name="p1246254871516"></a>ssl_certificate</p>
@@ -185,7 +185,7 @@ nginx.conf test is successful
 
 ## 效果验证<a name="section17691911165112"></a>
 
-部署成功后，可在浏览器的地址栏中输入“https://域名“，按“Enter“。
+部署成功后，可在浏览器的地址栏中输入“https<span>://</span>域名“，按“Enter“。
 
 如果浏览器地址栏显示绿色的小锁标识，则说明证书安装成功。
 
