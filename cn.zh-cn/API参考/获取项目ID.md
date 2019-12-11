@@ -2,7 +2,7 @@
 
 ## 调用API获取项目ID<a name="zh-cn_topic_0101662393_section1691341861315"></a>
 
-项目ID可以通过调用[查询指定条件下的项目信息](https://support.huaweicloud.com/api-iam/zh-cn_topic_0057845625.html)[查询指定条件下的项目信息](https://docs.prod-cloud-ocb.orange-business.com/zh-cn/api/iam/zh-cn_topic_0057845625.html)API获取。
+项目ID可以通过调用[查询指定条件下的项目信息](https://support.huaweicloud.com/api-iam/zh-cn_topic_0057845625.html)API获取。
 
 获取项目ID的接口为“GET https://\{Endpoint\}/v3/projects/”，其中\{Endpoint\}为IAM的终端节点，可以从管理员处[地区和终端节点](https://developer.huaweicloud.com/dev/endpoint)获取。接口的认证鉴权请参见[认证鉴权](认证鉴权.md#ZH-CN_TOPIC_0182547589)。
 
