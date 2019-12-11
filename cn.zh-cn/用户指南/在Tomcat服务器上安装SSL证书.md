@@ -219,7 +219,7 @@
 
     5.  将“Host name“改为证书绑定的域名。
 
-        完整配置如下（以“www.domain.com“为例）：
+        完整配置如下（以“www<span>.</span>domain.com“为例）：
 
         ```
         <Host name="www.domain.com"  appBase="webapps"
@@ -319,7 +319,7 @@
 
     5.  将“Host name“改为证书绑定的域名。
 
-        完整配置如下（以“www.domain.com“为例）：
+        完整配置如下（以“www<span>.</span>domain.com“为例）：
 
         ```
         <Host name="www.domain.com"  appBase="webapps"
@@ -337,7 +337,7 @@
 
 ## 效果验证<a name="section186262524017"></a>
 
-部署成功后，可在浏览器的地址栏中输入“https://域名“，按“Enter“。
+部署成功后，可在浏览器的地址栏中输入“https<span>://</span>域名“，按“Enter“。
 
 如果浏览器地址栏显示绿色的小锁标识，则说明证书安装成功。
 
