@@ -12,7 +12,7 @@
 
 ## 前提条件<a name="section121325115513"></a>
 
--   “SCM Viewer“属于策略，请先在IAM控制台中开通基于策略的访问控制公测，开通方法请参见：[申请基于策略的访问控制公测](https://support.huaweicloud.com/usermanual-iam/iam_01_019.html)。
+-   “SCM ReadOnlyAccess“属于策略，请先在IAM控制台中开通基于策略的访问控制公测，开通方法请参见：[申请基于策略的访问控制公测](https://support.huaweicloud.com/usermanual-iam/iam_01_019.html)。
 -   给用户组授权之前，请您了解用户组可以添加的SCM权限，并结合实际需求进行选择，SCM支持的系统权限，请参见[SCM系统权限](https://support.huaweicloud.com/productdesc-scm/scm_01_0070.html)。若您需要对除SCM之外的其它服务授权，IAM支持服务的所有策略请参见[系统权限](https://support.huaweicloud.com/permissions/policy_list.html?product=scm)。
 
 ## 示例流程<a name="section1354851316146"></a>
@@ -22,7 +22,7 @@
 
 1.  <a name="li8135822590"></a>[创建用户组并授权](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0046611269.html)
 
-    在IAM控制台创建用户组，并授予SSL证书管理的只读权限“SCM Viewer“。
+    在IAM控制台创建用户组，并授予SSL证书管理的只读权限“SCM ReadOnlyAccess“。
 
 2.  [创建用户并加入用户组](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0046611303.html)
 
@@ -32,7 +32,7 @@
 
     新创建的用户登录控制台，切换至授权区域，验证权限：
 
-    -   在“服务列表“中选择SSL证书管理，进入SCM主界面，单击右上角“购买证书“，尝试购买证书，如果无法购买证书，表示“SCM Viewer“已生效。
-    -   在“服务列表“中选择除SSL证书管理外的任一服务，若提示权限不足，表示“SCM Viewer“已生效。
+    -   在“服务列表“中选择SSL证书管理，进入SCM主界面，单击右上角“购买证书“，尝试购买证书，如果无法购买证书，表示“SCM ReadOnlyAccess“已生效。
+    -   在“服务列表“中选择除SSL证书管理外的任一服务，若提示权限不足，表示“SCM ReadOnlyAccess“已生效。
 
 
