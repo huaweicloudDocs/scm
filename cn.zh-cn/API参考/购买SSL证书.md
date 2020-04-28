@@ -60,7 +60,7 @@
 </td>
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.1.5.1.3 "><p id="p557810495386"><a name="p557810495386"></a><a name="p557810495386"></a>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.5.1.4 "><p id="p052314419383"><a name="p052314419383"></a><a name="p052314419383"></a>证书品牌。目前仅支持Globalsign品牌。</p>
+<td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.5.1.4 "><p id="p052314419383"><a name="p052314419383"></a><a name="p052314419383"></a>证书品牌。</p>
 <p id="p165237446381"><a name="p165237446381"></a><a name="p165237446381"></a>如：GLOBALSIGN</p>
 </td>
 </tr>
