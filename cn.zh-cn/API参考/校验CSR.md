@@ -51,7 +51,7 @@
 </th>
 </tr>
 </thead>
-<tbody><tr id="row2638193101722"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.1.5.1.1 "><p id="p4481944111821"><a name="p4481944111821"></a><a name="p4481944111821"></a>CSR</p>
+<tbody><tr id="row2638193101722"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.1.5.1.1 "><p id="p4481944111821"><a name="p4481944111821"></a><a name="p4481944111821"></a>csr</p>
 </td>
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.1.5.1.2 "><p id="p1686844510399"><a name="p1686844510399"></a><a name="p1686844510399"></a>是</p>
 </td>
@@ -98,7 +98,7 @@
 
     ```
     {
-        "CSR":"-----BEGIN NEW CERTIFICATE REQUEST-----******-----END NEW CERTIFICATE REQUEST-----"
+        "csr":"-----BEGIN NEW CERTIFICATE REQUEST-----******-----END NEW CERTIFICATE REQUEST-----"
     }
     ```
 
