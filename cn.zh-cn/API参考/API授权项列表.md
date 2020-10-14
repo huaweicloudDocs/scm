@@ -1,4 +1,4 @@
-# API授权项列表<a name="ZH-CN_TOPIC_0183644077"></a>
+# API授权项列表<a name="scm_02_0041"></a>
 
 <a name="table17904541184618"></a>
 <table><thead align="left"><tr id="row990434134614"><th class="cellrowborder" valign="top" width="15.58%" id="mcps1.1.7.1.1"><p id="p12905341114619"><a name="p12905341114619"></a><a name="p12905341114619"></a>权限</p>
