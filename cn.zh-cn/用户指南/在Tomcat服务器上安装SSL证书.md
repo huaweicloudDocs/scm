@@ -1,18 +1,30 @@
 # 在Tomcat服务器上安装SSL证书<a name="ZH-CN_TOPIC_0171809250"></a>
 
-## 操作场景<a name="section14208195416611"></a>
-
 本章节介绍如何将下载的证书安装到Tomcat服务器上。安装好证书后，您的Web服务器将能支持SSL通信，从而保证您Web服务器的通信安全。
 
->![](public_sys-resources/icon-notice.gif) **须知：**   
->-   安装前，请务必在Tomcat服务器上开启“443“端口，避免安装后仍然无法启用HTTPS。  
->-   如果一个域名有多个服务器，则每一个服务器上都要去部署。  
+>![](public_sys-resources/icon-note.gif) **说明：** 
+>如果证书安装过程中遇到问题，请在证书下载页面右方的“一对一咨询“中，单击“立即咨询“，联系工程师进行处理。
+>您还可以直接单击[HTTPS服务配置全站加密SSL优化检测](https://market.huaweicloud.com/product/00301-120142-0--0)进行购买，购买服务后，联系工程师进行处理。
 
 ## 前提条件<a name="section487617561143"></a>
 
 -   已获取管理控制台的登录账号与密码。
 -   “证书状态“为“已签发“。
 -   已下载SSL证书，具体操作请参见[下载证书](下载证书.md)。
+-   已安装OpenSSL工具。
+
+    您可以从“https://www.openssl.org/source/“下载最新的OpenSSL工具安装包（要求OpenSSL版本必须是1.0.1g或以上版本）。
+
+-   已安装Keytool工具。
+
+    Keytool工具一般包含在Java Development Kit（JDK）工具包中。
+
+
+## 约束条件<a name="section5414154419315"></a>
+
+-   证书安装前，务必在Tomcat服务器上开启“443“端口，避免安装后仍然无法启用HTTPS。
+-   如果一个域名有多个服务器，则每一个服务器上都要部署。
+-   待安装证书的服务器上需要运行的域名，必须与证书的域名一一对应，即购买的是哪个域名的证书，则用于哪个域名。否则安装部署后，浏览器将提示不安全。
 
 ## 操作步骤<a name="section6411655151013"></a>
 
@@ -39,8 +51,8 @@
 
     2.  从“Tomcat“文件夹内获得证书文件“server.jks“和密码文件“keystorePass.txt“。
 
-        >![](public_sys-resources/icon-notice.gif) **须知：**   
-        >密码文件“keystorePass.txt“中的密码为服务默认生成的初始随机密码，为了保证您的系统安全，建议您及时修改该密码。转换证书格式时可修改密码，详细操作请参见[主流数字证书都有哪些格式？](https://support.huaweicloud.com/scm_faq/scm_01_0054.html)。  
+        >![](public_sys-resources/icon-notice.gif) **须知：** 
+        >密码文件“keystorePass.txt“中的密码为服务默认生成的初始随机密码，为了保证您的系统安全，建议您及时修改该密码。转换证书格式时可修改密码，详细操作请参见[主流数字证书都有哪些格式？](https://support.huaweicloud.com/scm_faq/scm_01_0054.html)。
 
 
 -   <a name="li81041349344"></a>自己生成CSR
@@ -70,15 +82,16 @@
             Verifying - Enter Export Password:
             ```
 
-            >![](public_sys-resources/icon-note.gif) **说明：**   
-            >请牢记此处输入的PFX证书密码。后续设置JKS密码需要与此处设置的PFX密码保持一致，否则可能会导致Tomcat启动失败。  
-            >为提高用户密码安全性，建议按以下复杂度要求设置密码：  
-            >-   密码长度为8～32个字符。  
-            >-   至少需要包含大写字母、小写字母、数字、空格、特殊字符\~\`!@\#$%^&\*\(\)\_+|\{\}:"<\>?-=\\\[\];',./中的3种类型字符。  
+            >![](public_sys-resources/icon-note.gif) **说明：** 
+            >请牢记此处输入的PFX证书密码。后续设置JKS密码需要与此处设置的PFX密码保持一致，否则可能会导致Tomcat启动失败。
+            >为提高用户密码安全性，建议按以下复杂度要求设置密码：
+            >-   密码长度为8～32个字符。
+            >-   至少需要包含大写字母、小写字母、数字、空格、特殊字符\~\`!@\#$%^&\*\(\)\_+|\{\}:"<\>?-=\\\[\];',./中的3种类型字符。
 
         4.  再次输入PFX证书密码，按“Enter”。
 
             当系统没有回显任何错误信息，表示已在OpenSSL工具安装目录下成功生成“server.pfx“文件。
+
 
     3.  使用Keytool工具，将PFX格式证书文件转换成JKS格式，得到“server.jks“文件。
         1.  将[2](#zh-cn_topic_0110866190_zh-cn_topic_0168518253_li5678941865)中生成的“server.pfx“文件拷贝到“%JAVA\_HOME%/jdk/bin“目录下。
@@ -94,8 +107,8 @@
 
         3.  输入JKS证书密码，按“Enter”。
 
-            >![](public_sys-resources/icon-notice.gif) **须知：**   
-            >请将JKS密码设置为与PFX证书密码相同的密码，否则可能会导致Tomcat启动失败。  
+            >![](public_sys-resources/icon-notice.gif) **须知：** 
+            >请将JKS密码设置为与PFX证书密码相同的密码，否则可能会导致Tomcat启动失败。
 
             回显信息如下：
 
@@ -166,8 +179,8 @@
               clientAuth="false" sslProtocol="TLS" />
         ```
 
-        >![](public_sys-resources/icon-notice.gif) **须知：**   
-        >不要直接拷贝所有配置，只需添加“keystoreFile“，“keystorePass“参数即可，其它参数请根据自己的实际情况修改。  
+        >![](public_sys-resources/icon-notice.gif) **须知：** 
+        >不要直接拷贝所有配置，只需添加“keystoreFile“，“keystorePass“参数即可，其它参数请根据自己的实际情况修改。
 
         **表 1**  参数说明（一）
 
@@ -219,7 +232,7 @@
 
     5.  将“Host name“改为证书绑定的域名。
 
-        完整配置如下（以“www<span>.</span>domain.com“为例）：
+        完整配置如下（以“www.domain.com“为例）：
 
         ```
         <Host name="www.domain.com"  appBase="webapps"
@@ -271,8 +284,8 @@
         </Connector>
         ```
 
-        >![](public_sys-resources/icon-notice.gif) **须知：**   
-        >不要直接拷贝所有配置，只需修改“certificateKeystoreFile“和新增“certificateKeystorePassword“参数即可，其它参数请根据自己的实际情况修改。  
+        >![](public_sys-resources/icon-notice.gif) **须知：** 
+        >不要直接拷贝所有配置，只需修改“certificateKeystoreFile“和新增“certificateKeystorePassword“参数即可，其它参数请根据自己的实际情况修改。
 
         **表 2**  参数说明（二）
 
@@ -319,7 +332,7 @@
 
     5.  将“Host name“改为证书绑定的域名。
 
-        完整配置如下（以“www<span>.</span>domain.com“为例）：
+        完整配置如下（以“www.domain.com“为例）：
 
         ```
         <Host name="www.domain.com"  appBase="webapps"
@@ -337,14 +350,10 @@
 
 ## 效果验证<a name="section186262524017"></a>
 
-部署成功后，可在浏览器的地址栏中输入“https<span>://</span>域名“，按“Enter“。
+部署成功后，可在浏览器的地址栏中输入“https://域名“，按“Enter“。
 
-如果浏览器地址栏显示绿色的小锁标识，则说明证书安装成功。
+如果浏览器地址栏显示安全锁标识，则说明证书安装成功。
 
 -   如果网站仍然出现不安全提示，请参见[为什么部署了SSL证书后，网站仍然出现不安全提示？](https://support.huaweicloud.com/scm_faq/scm_01_0098.html)进行处理。
 -   如果通过域名访问网站时，无法打开网站，请参见[为什么部署了SSL证书后，通过域名访问网站时，无法打开网站？](https://support.huaweicloud.com/scm_faq/scm_01_0099.html)进行处理。
-
->![](public_sys-resources/icon-note.gif) **说明：**   
->如果证书安装过程中遇到问题，请在证书下载页面右方的“一对一咨询“中，单击“立即咨询“，联系工程师进行处理。  
->您还可以直接单击[HTTPS服务配置全站加密SSL优化检测](https://market.huaweicloud.com/product/00301-120142-0--0)进行购买，购买服务后，联系工程师进行处理。  
 

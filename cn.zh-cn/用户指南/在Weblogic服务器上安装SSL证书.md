@@ -1,7 +1,5 @@
 # 在Weblogic服务器上安装SSL证书<a name="ZH-CN_TOPIC_0184554056"></a>
 
-## 操作场景<a name="section168967407338"></a>
-
 Weblogic基于JAVAEE架构的中间件，Weblogic是用于开发、集成、部署和管理大型分布式Web应用、网络应用和数据库应用的Java应用服务器。将Java的动态功能和Java Enterprise标准的安全性引入大型网络应用的开发、集成、部署和管理之中。
 
 目前Weblogic 10.3.1及其以上的版本支持所有主流品牌的SSL证书，10.3.1之前的版本不支持各品牌SSL证书。
@@ -17,6 +15,12 @@ Weblogic基于JAVAEE架构的中间件，Weblogic是用于开发、集成、部�
 
     Weblogic安装后自带JDK安装。如果未安装，则请安装[Java SE Development Kit \(JDK\)](https://www.oracle.com/technetwork/java/javase/downloads/index.html)。
 
+
+## 约束条件<a name="section13500821131513"></a>
+
+-   证书安装前，务必在Tomcat服务器上开启“443“端口，避免安装后仍然无法启用HTTPS。
+-   如果一个域名有多个服务器，则每一个服务器上都要部署。
+-   待安装证书的服务器上需要运行的域名，必须与证书的域名一一对应，即购买的是哪个域名的证书，则用于哪个域名。否则安装部署后，浏览器将提示不安全。
 
 ## 操作步骤<a name="section6604155243312"></a>
 
@@ -43,8 +47,8 @@ Weblogic基于JAVAEE架构的中间件，Weblogic是用于开发、集成、部�
 
     2.  从“Tomcat“文件夹内获得证书文件“server.jks“和密码文件“keystorePass.txt“。
 
-        >![](public_sys-resources/icon-notice.gif) **须知：**   
-        >密码文件“keystorePass.txt“中的密码为服务默认生成的初始随机密码，为了保证您的系统安全，建议您及时修改该密码。转换证书格式时可修改密码，详细操作请参见[主流数字证书都有哪些格式？](https://support.huaweicloud.com/scm_faq/scm_01_0054.html)。  
+        >![](public_sys-resources/icon-notice.gif) **须知：** 
+        >密码文件“keystorePass.txt“中的密码为服务默认生成的初始随机密码，为了保证您的系统安全，建议您及时修改该密码。转换证书格式时可修改密码，详细操作请参见[主流数字证书都有哪些格式？](https://support.huaweicloud.com/scm_faq/scm_01_0054.html)。
 
 
 -   <a name="li81041349344"></a>申请证书时，如果“证书请求文件“选择“自己生成CSR“，请参考以下步骤进行配置。
@@ -74,15 +78,16 @@ Weblogic基于JAVAEE架构的中间件，Weblogic是用于开发、集成、部�
             Verifying - Enter Export Password:
             ```
 
-            >![](public_sys-resources/icon-note.gif) **说明：**   
-            >请牢记此处输入的PFX证书密码。后续设置JKS密码需要与此处设置的PFX密码保持一致，否则可能会导致Weblogic启动失败。  
-            >为提高用户密码安全性，建议按以下复杂度要求设置密码：  
-            >-   密码长度为8～32个字符。  
-            >-   至少需要包含大写字母、小写字母、数字、空格、特殊字符\~\`!@\#$%^&\*\(\)\_+|\{\}:"<\>?-=\\\[\];',./中的3种类型字符。  
+            >![](public_sys-resources/icon-note.gif) **说明：** 
+            >请牢记此处输入的PFX证书密码。后续设置JKS密码需要与此处设置的PFX密码保持一致，否则可能会导致Weblogic启动失败。
+            >为提高用户密码安全性，建议按以下复杂度要求设置密码：
+            >-   密码长度为8～32个字符。
+            >-   至少需要包含大写字母、小写字母、数字、空格、特殊字符\~\`!@\#$%^&\*\(\)\_+|\{\}:"<\>?-=\\\[\];',./中的3种类型字符。
 
         4.  再次输入PFX证书密码，按“Enter”。
 
             当系统没有回显任何错误信息，表示已在OpenSSL工具安装目录下成功生成“server.pfx“文件。
+
 
     3.  使用Keytool工具，将PFX格式证书文件转换成JKS格式，得到“server.jks“文件。
         1.  将[2](#zh-cn_topic_0110866190_zh-cn_topic_0168518253_li5678941865)中生成的“server.pfx“文件拷贝到“%JAVA\_HOME%/jdk/bin“目录下。
@@ -98,8 +103,8 @@ Weblogic基于JAVAEE架构的中间件，Weblogic是用于开发、集成、部�
 
         3.  输入JKS证书密码，按“Enter”。
 
-            >![](public_sys-resources/icon-notice.gif) **须知：**   
-            >请将JKS密码设置为与PFX证书密码相同的密码，否则可能会导致Weblogic启动失败。  
+            >![](public_sys-resources/icon-notice.gif) **须知：** 
+            >请将JKS密码设置为与PFX证书密码相同的密码，否则可能会导致Weblogic启动失败。
 
             回显信息如下：
 
@@ -183,6 +188,7 @@ Weblogic基于JAVAEE架构的中间件，Weblogic是用于开发、集成、部�
         -   **Java Standard Trust Keystore Passphrase**：输入默认密码changeit。
         -   **Confirm Java Standard Trust Keystore Passphrase**：再次输入默认密码。
 
+
 7.  配置服务器证书私钥别名。
 
     在服务器的配置页面，选择“SSL“页签，配置以下参数：
@@ -208,14 +214,10 @@ Weblogic基于JAVAEE架构的中间件，Weblogic是用于开发、集成、部�
 
 ## 效果验证<a name="section10711447172315"></a>
 
-部署成功后，可在浏览器的地址栏中输入“https<span>://</span>域名“，按“Enter“。
+部署成功后，可在浏览器的地址栏中输入“https://域名“，按“Enter“。
 
-如果浏览器地址栏显示绿色的小锁标识，则说明证书安装成功。
+如果浏览器地址栏显示安全锁标识，则说明证书安装成功。
 
 -   如果网站仍然出现不安全提示，请参见[为什么部署了SSL证书后，网站仍然出现不安全提示？](https://support.huaweicloud.com/scm_faq/scm_01_0098.html)进行处理。
 -   如果通过域名访问网站时，无法打开网站，请参见[为什么部署了SSL证书后，通过域名访问网站时，无法打开网站？](https://support.huaweicloud.com/scm_faq/scm_01_0099.html)进行处理。
-
->![](public_sys-resources/icon-note.gif) **说明：**   
->如果证书安装过程中遇到问题，请在证书下载页面右方的“一对一咨询“中，单击“立即咨询“，联系工程师进行处理。  
->您还可以直接单击[HTTPS服务配置全站加密SSL优化检测](https://market.huaweicloud.com/product/00301-120142-0--0)进行购买，购买服务后，联系工程师进行处理。  
 
