@@ -40,19 +40,19 @@
         **图 1**  本地解压SSL证书<a name="zh-cn_topic_0000001124401671_zh-cn_topic_0000001073213596_zh-cn_topic_0171809250_zh-cn_topic_0110866190_fdd76c20249e24d95b7a52872f72f84fd"></a>  
         ![](figures/本地解压SSL证书.png "本地解压SSL证书")
 
-    2.  从“Apache“文件夹内获得证书文件“ca.crt“，“server.crt“和私钥文件“server.key“。
-        -   “ca.crt“文件包括一段中级CA证书代码“-----BEGIN CERTIFICATE-----“和“-----END CERTIFICATE-----“。
-        -   “server.crt“文件包括一段服务器证书代码  “-----BEGIN CERTIFICATE-----“和“-----END CERTIFICATE-----“。
-        -   “server.key“文件包括一段私钥代码“-----BEGIN RSA PRIVATE KEY-----“和“-----END RSA PRIVATE KEY-----“。
+    2.  从“_证书ID_\__证书绑定的域名_\_Apache“文件夹内获得证书文件“_证书ID_\__证书绑定的域名_\_ca.crt“，“_证书ID_\__证书绑定的域名_\_server.crt“和私钥文件“_证书ID_\__证书绑定的域名_\_server.key“。
+        -   “_证书ID_\__证书绑定的域名_\_ca.crt“文件包括一段中级CA证书代码“-----BEGIN CERTIFICATE-----“和“-----END CERTIFICATE-----“。
+        -   “_证书ID_\__证书绑定的域名_\_server.crt“文件包括一段服务器证书代码“-----BEGIN CERTIFICATE-----“和“-----END CERTIFICATE-----“。
+        -   “_证书ID_\__证书绑定的域名_\_server.key“文件包括一段私钥代码“-----BEGIN RSA PRIVATE KEY-----“和“-----END RSA PRIVATE KEY-----“。
 
 
 -   <a name="zh-cn_topic_0000001124401671_zh-cn_topic_0171809252_li19371171014199"></a>自己生成CSR
-    1.  解压已下载的证书压缩包，获得“server.pem“文件。
+    1.  解压已下载的证书压缩包，获得“_证书ID_\__证书绑定的域名_\_server.pem“文件。
 
-        “server.pem“文件包括两段证书代码“-----BEGIN CERTIFICATE-----“和“-----END CERTIFICATE-----“，分别为服务器证书和中级CA证书。
+        “_证书ID_\__证书绑定的域名_\_server.pem“文件包括两段证书代码“-----BEGIN CERTIFICATE-----“和“-----END CERTIFICATE-----“，分别为服务器证书和中级CA证书。
 
-    2.  拷贝“server.pem“文件的第一段证书代码（服务器证书），并另存为“server.crt“文件。
-    3.  拷贝“server.pem“文件的第二段证书代码（中级CA），并另存为“ca.crt“文件。
+    2.  拷贝“_证书ID_\__证书绑定的域名_\_server.pem“文件的第一段证书代码（服务器证书），并另存为“server.crt“文件。
+    3.  拷贝“_证书ID_\__证书绑定的域名_\_server.pem“文件的第二段证书代码（中级CA），并另存为“ca.crt“文件。
     4.  将“ca.crt“、“server.crt“和生成CSR时的私钥“server.key“放在任意文件夹内。
 
 

@@ -40,17 +40,17 @@
         **图 1**  本地解压SSL证书<a name="zh-cn_topic_0000001124217601_zh-cn_topic_0000001073213596_zh-cn_topic_0171809250_zh-cn_topic_0110866190_fdd76c20249e24d95b7a52872f72f84fd"></a>  
         ![](figures/本地解压SSL证书.png "本地解压SSL证书")
 
-    2.  从“Nginx“文件夹内获得证书文件“server.crt“和私钥文件“server.key“。
-        -   “server.crt“文件包括两段证书代码“-----BEGIN CERTIFICATE-----“和“-----END CERTIFICATE-----“，分别为服务器证书和中级CA。
-        -   “server.key“文件包括一段私钥代码“-----BEGIN RSA PRIVATE KEY-----“和“-----END RSA PRIVATE KEY-----“。
+    2.  从“_证书ID_\__证书绑定的域名_\_Nginx“文件夹内获得证书文件“_证书ID_\__证书绑定的域名_\_server.crt“和私钥文件“_证书ID_\__证书绑定的域名_\_server.key“。
+        -   “_证书ID_\__证书绑定的域名_\_server.crt“文件包括两段证书代码“-----BEGIN CERTIFICATE-----“和“-----END CERTIFICATE-----“，分别为服务器证书和中级CA。
+        -   “_证书ID_\__证书绑定的域名_\_server.key“文件包括一段私钥代码“-----BEGIN RSA PRIVATE KEY-----“和“-----END RSA PRIVATE KEY-----“。
 
 
 -   <a name="zh-cn_topic_0000001124217601_zh-cn_topic_0171809251_li12143211413"></a>自己生成CSR
-    1.  解压已下载的证书压缩包，获得“server.pem“文件。
+    1.  解压已下载的证书压缩包，获得“_证书ID_\__证书绑定的域名_\_server.pem“文件。
 
-        “server.pem“文件包括两段证书代码“-----BEGIN CERTIFICATE-----“和“-----END CERTIFICATE-----“，分别为服务器证书和中级CA证书。
+        “_证书ID_\__证书绑定的域名_\_server.pem“文件包括两段证书代码“-----BEGIN CERTIFICATE-----“和“-----END CERTIFICATE-----“，分别为服务器证书和中级CA证书。
 
-    2.  将“server.pem“的后缀名修改为“crt”，即“server.crt“。
+    2.  将“_证书ID_\__证书绑定的域名_\_server.pem“的后缀名修改为“crt”，即“server.crt“。
     3.  将“server.crt“和生成CSR时的私钥“server.key“放在任意文件夹内。
 
 
@@ -111,7 +111,7 @@
 
     ```
     server {
-            listen       443 ssl;
+            listen       443 ssl; #配置HTTPS的默认访问端口为443。如果在此处未配置HTTPS的默认访问端口，可能会导致Nginx无法启动。
             server_name  www.domain.com; #修改为您证书绑定的域名。
             ssl_certificate      cert/server.crt; #替换成您的证书文件的路径。
             ssl_certificate_key  cert/server.key; #替换成您的私钥文件的路径。
@@ -141,6 +141,7 @@
     <tbody><tr id="zh-cn_topic_0000001124217601_zh-cn_topic_0171809251_row2462154818156"><td class="cellrowborder" valign="top" width="25.619999999999997%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0000001124217601_zh-cn_topic_0171809251_p13462194817156"><a name="zh-cn_topic_0000001124217601_zh-cn_topic_0171809251_p13462194817156"></a><a name="zh-cn_topic_0000001124217601_zh-cn_topic_0171809251_p13462194817156"></a>listen</p>
     </td>
     <td class="cellrowborder" valign="top" width="74.38%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0000001124217601_zh-cn_topic_0171809251_p1146244815153"><a name="zh-cn_topic_0000001124217601_zh-cn_topic_0171809251_p1146244815153"></a><a name="zh-cn_topic_0000001124217601_zh-cn_topic_0171809251_p1146244815153"></a>SSL访问端口号，设置为<span class="parmvalue" id="zh-cn_topic_0000001124217601_zh-cn_topic_0171809251_parmvalue9462348151514"><a name="zh-cn_topic_0000001124217601_zh-cn_topic_0171809251_parmvalue9462348151514"></a><a name="zh-cn_topic_0000001124217601_zh-cn_topic_0171809251_parmvalue9462348151514"></a>“443”</span>。</p>
+    <p id="zh-cn_topic_0000001124217601_p418225520498"><a name="zh-cn_topic_0000001124217601_p418225520498"></a><a name="zh-cn_topic_0000001124217601_p418225520498"></a>配置HTTPS的默认访问端口为443。如果未配置HTTPS的默认访问端口，可能会导致Nginx无法启动。</p>
     </td>
     </tr>
     <tr id="zh-cn_topic_0000001124217601_zh-cn_topic_0171809251_row1146216480154"><td class="cellrowborder" valign="top" width="25.619999999999997%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0000001124217601_zh-cn_topic_0171809251_p5462164801519"><a name="zh-cn_topic_0000001124217601_zh-cn_topic_0171809251_p5462164801519"></a><a name="zh-cn_topic_0000001124217601_zh-cn_topic_0171809251_p5462164801519"></a>server_name</p>
@@ -180,11 +181,7 @@ nginx.conf test is successful
 
 ## 步骤五：重启Nginx<a name="zh-cn_topic_0000001124217601_zh-cn_topic_0171809251_section1334319226163"></a>
 
-执行以下操作重启Nginx。
-
-在Nginx安装目录下执行**nginx -s quit**命令，停止Nginx服务；
-
-在Nginx安装目录下执行****start nginx****命令，启动Nginx服务。
+重启Nginx，使配置生效。
 
 ## 效果验证<a name="zh-cn_topic_0000001124217601_zh-cn_topic_0171809251_section17691911165112"></a>
 

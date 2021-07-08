@@ -45,22 +45,22 @@ Weblogic基于JAVAEE架构的中间件，Weblogic是用于开发、集成、部�
         **图 1**  本地解压SSL证书<a name="zh-cn_topic_0000001124217543_zh-cn_topic_0000001124519755_zh-cn_topic_0171809250_zh-cn_topic_0110866190_fdd76c20249e24d95b7a52872f72f84fd"></a>  
         ![](figures/本地解压SSL证书.png "本地解压SSL证书")
 
-    2.  从“Tomcat“文件夹内获得证书文件“server.jks“和密码文件“keystorePass.txt“。
+    2.  从“_证书ID_\__证书绑定的域名_\_Tomcat“文件夹内获得证书文件“_证书ID_\__证书绑定的域名_\_server.jks“和密码文件“_证书ID_\__证书绑定的域名_\_keystorePass.txt“。
 
         >![](public_sys-resources/icon-notice.gif) **须知：** 
         >密码文件“keystorePass.txt“中的密码为服务默认生成的初始随机密码，为了保证您的系统安全，建议您及时修改该密码。转换证书格式时可修改密码，详细操作请参见[主流数字证书都有哪些格式？](https://support.huaweicloud.com/ccm_faq/ccm_01_0054.html)。
 
 
 -   <a name="zh-cn_topic_0000001124217543_zh-cn_topic_0184554056_li81041349344"></a>申请证书时，如果“证书请求文件“选择“自己生成CSR“，请参考以下步骤进行配置。
-    1.  解压已下载的证书压缩包，获得“server.pem“文件。
+    1.  解压已下载的证书压缩包，获得“_证书ID_\__证书绑定的域名_\_server.pem“文件。
 
-        “server.pem“文件包括两段证书代码“-----BEGIN CERTIFICATE-----“和“-----END CERTIFICATE-----“，分别为服务器证书和中级CA证书。
+        “_证书ID_\__证书绑定的域名_\_server.pem“文件包括两段证书代码“-----BEGIN CERTIFICATE-----“和“-----END CERTIFICATE-----“，分别为服务器证书和中级CA证书。
 
     2.  <a name="zh-cn_topic_0000001124217543_zh-cn_topic_0184554056_zh-cn_topic_0110866190_zh-cn_topic_0168518253_li5678941865"></a>使用OpenSSL工具，将pem格式证书转换为PFX格式证书，得到“server.pfx“文件。
         1.  “pem“文件和生成CSR时的私钥“server.key“放在OpenSSL工具安装目录的bin目录下。
         2.  在OpenSSL工具安装目录的bin目录下，执行以下命令将pem格式证书转换为PFX格式证书，按“Enter”。
 
-            **openssl pkcs12 -export -out server.pfx -inkey server.key -in server.pem**
+            **openssl pkcs12 -export -out server.pfx -inkey server.key -in** _证书ID_**\_**_证书绑定的域名_**\_server.pem**
 
             回显信息如下：
 
@@ -212,7 +212,7 @@ Weblogic基于JAVAEE架构的中间件，Weblogic是用于开发、集成、部�
     ![](figures/提示信息.png "提示信息")
 
 
-## 效果验证<a name="zh-cn_topic_0184554056_section10711447172315"></a>
+## 效果验证<a name="zh-cn_topic_0000001124217543_zh-cn_topic_0184554056_section10711447172315"></a>
 
 部署成功后，可在浏览器的地址栏中输入“https://域名“，按“Enter“。
 

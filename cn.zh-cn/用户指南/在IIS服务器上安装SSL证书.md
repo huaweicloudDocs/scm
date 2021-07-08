@@ -40,22 +40,22 @@
         **图 1**  本地解压SSL证书<a name="zh-cn_topic_0000001124401711_zh-cn_topic_0000001073213596_zh-cn_topic_0171809250_zh-cn_topic_0110866190_fdd76c20249e24d95b7a52872f72f84fd"></a>  
         ![](figures/本地解压SSL证书.png "本地解压SSL证书")
 
-    2.  从“IIS“文件夹内获得SSL证书文件“server.pfx“和密码文件“keystorePass.txt。“
+    2.  从“_证书ID_\__证书绑定的域名_\_IIS“文件夹内获得SSL证书文件“_证书ID_\__证书绑定的域名_\_server.pfx“和密码文件“_证书ID_\__证书绑定的域名_\_keystorePass.txt。“
 
         >![](public_sys-resources/icon-notice.gif) **须知：** 
         >密码文件“keystorePass.txt“中的密码为服务默认生成的初始随机密码，为了保证您的系统安全，建议您及时修改该密码。转换证书格式时可修改密码，详细操作请参见[主流数字证书都有哪些格式？](https://support.huaweicloud.com/ccm_faq/ccm_01_0054.html)。
 
 
 -   <a name="zh-cn_topic_0000001124401711_zh-cn_topic_0171809253_li84352942216"></a>自己生成CSR
-    1.  解压已下载的证书压缩包，获得“server.pem“文件。
+    1.  解压已下载的证书压缩包，获得“_证书ID_\__证书绑定的域名_\_server.pem“文件。
 
-        “server.pem“文件包括两段证书代码“-----BEGIN CERTIFICATE-----“和“-----END CERTIFICATE-----“，分别为服务器证书和中级CA证书。
+        “_证书ID_\__证书绑定的域名_\_server.pem“文件包括两段证书代码“-----BEGIN CERTIFICATE-----“和“-----END CERTIFICATE-----“，分别为服务器证书和中级CA证书。
 
     2.  使用OpenSSL工具，将pem格式证书转换为PFX格式证书，得到“server.pfx“文件。
         1.  “pem“文件和生成CSR时的私钥“server.key“放在OpenSSL工具安装目录的bin目录下。
         2.  在OpenSSL工具安装目录的bin目录下，执行以下命令将pem格式证书转换为PFX格式证书，按“Enter”。
 
-            **openssl pkcs12 -export -out server.pfx -inkey server.key -in server.pem**
+            **openssl pkcs12 -export -out server.pfx -inkey server.key -in** _证书ID_\__证书绑定的域名_\_**server.pem**
 
             回显信息如下：
 
