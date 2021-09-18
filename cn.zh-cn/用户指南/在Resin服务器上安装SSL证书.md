@@ -83,7 +83,6 @@
 
             当系统没有回显任何错误信息，表示已在OpenSSL工具安装目录下成功生成“server.pfx“文件。
 
-
     3.  使用Keytool工具，将PFX格式证书文件转换成JKS格式，得到“server.jks“文件。
         1.  将[2](#zh-cn_topic_0000001119293962_zh-cn_topic_0184554056_zh-cn_topic_0110866190_zh-cn_topic_0168518253_li5678941865)中生成的“server.pfx“文件拷贝到“%JAVA\_HOME%/jdk/bin“目录下。
         2.  在“%JAVA\_HOME%/jdk/bin“目录下，执行以下命令，按“Enter”。
@@ -152,7 +151,6 @@
 
         **图 3**  登录Resin<a name="zh-cn_topic_0000001119293962_fig192720218391"></a>  
         ![](figures/登录Resin.png "登录Resin")
-
 
 2.  修改配置文件。
     1.  在Resin安装目录下的“Resin.properties“配置文件（由于Resin版本的不同，配置文件也可能为“resin.xml“文件）中，找到如下参数：

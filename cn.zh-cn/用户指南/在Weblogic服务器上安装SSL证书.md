@@ -88,7 +88,6 @@ Weblogic基于JAVAEE架构的中间件，Weblogic是用于开发、集成、部�
 
             当系统没有回显任何错误信息，表示已在OpenSSL工具安装目录下成功生成“server.pfx“文件。
 
-
     3.  使用Keytool工具，将PFX格式证书文件转换成JKS格式，得到“server.jks“文件。
         1.  将[2](#zh-cn_topic_0000001124217543_zh-cn_topic_0184554056_zh-cn_topic_0110866190_zh-cn_topic_0168518253_li5678941865)中生成的“server.pfx“文件拷贝到“%JAVA\_HOME%/jdk/bin“目录下。
         2.  在“%JAVA\_HOME%/jdk/bin“目录下，执行以下命令，按“Enter”。
@@ -187,7 +186,6 @@ Weblogic基于JAVAEE架构的中间件，Weblogic是用于开发、集成、部�
 
         -   **Java Standard Trust Keystore Passphrase**：输入默认密码changeit。
         -   **Confirm Java Standard Trust Keystore Passphrase**：再次输入默认密码。
-
 
 7.  配置服务器证书私钥别名。
 

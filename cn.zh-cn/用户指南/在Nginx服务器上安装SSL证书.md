@@ -181,7 +181,11 @@ nginx.conf test is successful
 
 ## 步骤五：重启Nginx<a name="zh-cn_topic_0000001124217601_zh-cn_topic_0171809251_section1334319226163"></a>
 
-重启Nginx，使配置生效。
+执行以下命令，重启Nginx，使配置生效。
+
+**cd /usr/local/nginx/sbin**
+
+**./nginx -s reload**
 
 ## 效果验证<a name="zh-cn_topic_0000001124217601_zh-cn_topic_0171809251_section17691911165112"></a>
 
