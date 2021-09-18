@@ -1,5 +1,108 @@
 # API授权项列表<a name="scm_02_0041"></a>
 
+## v3接口的授权信息<a name="section1452143142910"></a>
+
+<a name="table209821436446"></a>
+<table><thead align="left"><tr id="row898223617416"><th class="cellrowborder" valign="top" width="12.670000000000003%" id="mcps1.1.7.1.1"><p id="p1998216366420"><a name="p1998216366420"></a><a name="p1998216366420"></a>权限</p>
+</th>
+<th class="cellrowborder" valign="top" width="37.75000000000001%" id="mcps1.1.7.1.2"><p id="p179821236545"><a name="p179821236545"></a><a name="p179821236545"></a>对应API接口</p>
+</th>
+<th class="cellrowborder" valign="top" width="16.230000000000004%" id="mcps1.1.7.1.3"><p id="p1198211361241"><a name="p1198211361241"></a><a name="p1198211361241"></a>授权项（Action）</p>
+</th>
+<th class="cellrowborder" valign="top" width="15.350000000000003%" id="mcps1.1.7.1.4"><p id="p1598253614411"><a name="p1598253614411"></a><a name="p1598253614411"></a>依赖的授权项</p>
+</th>
+<th class="cellrowborder" valign="top" width="9.000000000000002%" id="mcps1.1.7.1.5"><p id="p79821636448"><a name="p79821636448"></a><a name="p79821636448"></a>IAM项目</p>
+<p id="p79821436846"><a name="p79821436846"></a><a name="p79821436846"></a>(Project)</p>
+</th>
+<th class="cellrowborder" valign="top" width="9.000000000000002%" id="mcps1.1.7.1.6"><p id="p14982143617415"><a name="p14982143617415"></a><a name="p14982143617415"></a>企业项目</p>
+<p id="p20982936141"><a name="p20982936141"></a><a name="p20982936141"></a>(Enterprise Project)</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1198293615420"><td class="cellrowborder" valign="top" width="12.670000000000003%" headers="mcps1.1.7.1.1 "><p id="p8983143616417"><a name="p8983143616417"></a><a name="p8983143616417"></a>查询证书列表</p>
+</td>
+<td class="cellrowborder" valign="top" width="37.75000000000001%" headers="mcps1.1.7.1.2 "><p id="p179833363411"><a name="p179833363411"></a><a name="p179833363411"></a>GET /v3/scm/certificates</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.230000000000004%" headers="mcps1.1.7.1.3 "><p id="p169832036044"><a name="p169832036044"></a><a name="p169832036044"></a>scm:cert:list</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.350000000000003%" headers="mcps1.1.7.1.4 "><p id="p1198383611416"><a name="p1198383611416"></a><a name="p1198383611416"></a>-</p>
+</td>
+<td class="cellrowborder" valign="top" width="9.000000000000002%" headers="mcps1.1.7.1.5 "><p id="p149835361240"><a name="p149835361240"></a><a name="p149835361240"></a>√</p>
+</td>
+<td class="cellrowborder" valign="top" width="9.000000000000002%" headers="mcps1.1.7.1.6 "><p id="p1098303610419"><a name="p1098303610419"></a><a name="p1098303610419"></a>x</p>
+</td>
+</tr>
+<tr id="row12983736949"><td class="cellrowborder" valign="top" width="12.670000000000003%" headers="mcps1.1.7.1.1 "><p id="p1983173615416"><a name="p1983173615416"></a><a name="p1983173615416"></a>获取证书详情</p>
+</td>
+<td class="cellrowborder" valign="top" width="37.75000000000001%" headers="mcps1.1.7.1.2 "><p id="p498383616412"><a name="p498383616412"></a><a name="p498383616412"></a>GET /v3/scm/certificates/{certificate_id}</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.230000000000004%" headers="mcps1.1.7.1.3 "><p id="p49831936243"><a name="p49831936243"></a><a name="p49831936243"></a>scm:cert:get</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.350000000000003%" headers="mcps1.1.7.1.4 "><p id="p1298363610418"><a name="p1298363610418"></a><a name="p1298363610418"></a>-</p>
+</td>
+<td class="cellrowborder" valign="top" width="9.000000000000002%" headers="mcps1.1.7.1.5 "><p id="p1998313368410"><a name="p1998313368410"></a><a name="p1998313368410"></a>√</p>
+</td>
+<td class="cellrowborder" valign="top" width="9.000000000000002%" headers="mcps1.1.7.1.6 "><p id="p199836362412"><a name="p199836362412"></a><a name="p199836362412"></a>x</p>
+</td>
+</tr>
+<tr id="row99859361743"><td class="cellrowborder" valign="top" width="12.670000000000003%" headers="mcps1.1.7.1.1 "><p id="p1798543618417"><a name="p1798543618417"></a><a name="p1798543618417"></a>删除证书</p>
+</td>
+<td class="cellrowborder" valign="top" width="37.75000000000001%" headers="mcps1.1.7.1.2 "><p id="p79859369416"><a name="p79859369416"></a><a name="p79859369416"></a>DELETE /v3/scm/certificates/{certificate_id}</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.230000000000004%" headers="mcps1.1.7.1.3 "><p id="p29850361940"><a name="p29850361940"></a><a name="p29850361940"></a>scm:cert:delete</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.350000000000003%" headers="mcps1.1.7.1.4 "><p id="p1198517361411"><a name="p1198517361411"></a><a name="p1198517361411"></a>-</p>
+</td>
+<td class="cellrowborder" valign="top" width="9.000000000000002%" headers="mcps1.1.7.1.5 "><p id="p15985163618412"><a name="p15985163618412"></a><a name="p15985163618412"></a>√</p>
+</td>
+<td class="cellrowborder" valign="top" width="9.000000000000002%" headers="mcps1.1.7.1.6 "><p id="p1798513613418"><a name="p1798513613418"></a><a name="p1798513613418"></a>x</p>
+</td>
+</tr>
+<tr id="row2098616361243"><td class="cellrowborder" valign="top" width="12.670000000000003%" headers="mcps1.1.7.1.1 "><p id="p2986236744"><a name="p2986236744"></a><a name="p2986236744"></a>推送证书</p>
+</td>
+<td class="cellrowborder" valign="top" width="37.75000000000001%" headers="mcps1.1.7.1.2 "><p id="p0986136143"><a name="p0986136143"></a><a name="p0986136143"></a>POST /v3/scm/certificates/{certificate_id}/push</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.230000000000004%" headers="mcps1.1.7.1.3 "><p id="p1098614361441"><a name="p1098614361441"></a><a name="p1098614361441"></a>scm:cert:push</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.350000000000003%" headers="mcps1.1.7.1.4 "><p id="p59865361342"><a name="p59865361342"></a><a name="p59865361342"></a>推送至CDN时，还需要添加如下授权项：</p>
+<p id="p18986193616416"><a name="p18986193616416"></a><a name="p18986193616416"></a>cdn:configuration:queryHttpsConf</p>
+</td>
+<td class="cellrowborder" valign="top" width="9.000000000000002%" headers="mcps1.1.7.1.5 "><p id="p49866361143"><a name="p49866361143"></a><a name="p49866361143"></a>√</p>
+</td>
+<td class="cellrowborder" valign="top" width="9.000000000000002%" headers="mcps1.1.7.1.6 "><p id="p398613618414"><a name="p398613618414"></a><a name="p398613618414"></a>x</p>
+</td>
+</tr>
+<tr id="row898615367419"><td class="cellrowborder" valign="top" width="12.670000000000003%" headers="mcps1.1.7.1.1 "><p id="p1698683615417"><a name="p1698683615417"></a><a name="p1698683615417"></a>导入证书</p>
+</td>
+<td class="cellrowborder" valign="top" width="37.75000000000001%" headers="mcps1.1.7.1.2 "><p id="p1098616361410"><a name="p1098616361410"></a><a name="p1098616361410"></a>POST /v3/scm/certificates/import</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.230000000000004%" headers="mcps1.1.7.1.3 "><p id="p1698623616415"><a name="p1698623616415"></a><a name="p1698623616415"></a>scm:cert:upload</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.350000000000003%" headers="mcps1.1.7.1.4 "><p id="p12986123611418"><a name="p12986123611418"></a><a name="p12986123611418"></a>-</p>
+</td>
+<td class="cellrowborder" valign="top" width="9.000000000000002%" headers="mcps1.1.7.1.5 "><p id="p13986153618413"><a name="p13986153618413"></a><a name="p13986153618413"></a>√</p>
+</td>
+<td class="cellrowborder" valign="top" width="9.000000000000002%" headers="mcps1.1.7.1.6 "><p id="p1098618361348"><a name="p1098618361348"></a><a name="p1098618361348"></a>x</p>
+</td>
+</tr>
+<tr id="row1964112359188"><td class="cellrowborder" valign="top" width="12.670000000000003%" headers="mcps1.1.7.1.1 "><p id="p13642163531815"><a name="p13642163531815"></a><a name="p13642163531815"></a>导出证书</p>
+</td>
+<td class="cellrowborder" valign="top" width="37.75000000000001%" headers="mcps1.1.7.1.2 "><p id="p162582034201918"><a name="p162582034201918"></a><a name="p162582034201918"></a>POST /v3/scm/certificates/{certificate_id}/export</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.230000000000004%" headers="mcps1.1.7.1.3 "><p id="p425823417196"><a name="p425823417196"></a><a name="p425823417196"></a>scm:cert:download</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.350000000000003%" headers="mcps1.1.7.1.4 "><p id="p1225833441910"><a name="p1225833441910"></a><a name="p1225833441910"></a>-</p>
+</td>
+<td class="cellrowborder" valign="top" width="9.000000000000002%" headers="mcps1.1.7.1.5 "><p id="p42581934111920"><a name="p42581934111920"></a><a name="p42581934111920"></a>√</p>
+</td>
+<td class="cellrowborder" valign="top" width="9.000000000000002%" headers="mcps1.1.7.1.6 "><p id="p025913342198"><a name="p025913342198"></a><a name="p025913342198"></a>x</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## v2接口的授权信息<a name="section252354332910"></a>
+
 <a name="table17904541184618"></a>
 <table><thead align="left"><tr id="row990434134614"><th class="cellrowborder" valign="top" width="15.58%" id="mcps1.1.7.1.1"><p id="p12905341114619"><a name="p12905341114619"></a><a name="p12905341114619"></a>权限</p>
 </th>
