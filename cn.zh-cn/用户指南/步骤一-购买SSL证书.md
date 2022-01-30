@@ -99,7 +99,7 @@
         <tr id="zh-cn_topic_0000001215817231_zh-cn_topic_0000001124518721_zh-cn_topic_0196219184_zh-cn_topic_0195832373_zh-cn_topic_0110865441_row149998582391"><td class="cellrowborder" valign="top" width="23.46%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0000001215817231_zh-cn_topic_0000001124518721_zh-cn_topic_0196219184_zh-cn_topic_0195832373_zh-cn_topic_0110865441_p4999158153913"><a name="zh-cn_topic_0000001215817231_zh-cn_topic_0000001124518721_zh-cn_topic_0196219184_zh-cn_topic_0195832373_zh-cn_topic_0110865441_p4999158153913"></a><a name="zh-cn_topic_0000001215817231_zh-cn_topic_0000001124518721_zh-cn_topic_0196219184_zh-cn_topic_0195832373_zh-cn_topic_0110865441_p4999158153913"></a>多域名</p>
         </td>
         <td class="cellrowborder" valign="top" width="76.53999999999999%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0000001215817231_zh-cn_topic_0000001124518721_zh-cn_topic_0196219184_p55095411516"><a name="zh-cn_topic_0000001215817231_zh-cn_topic_0000001124518721_zh-cn_topic_0196219184_p55095411516"></a><a name="zh-cn_topic_0000001215817231_zh-cn_topic_0000001124518721_zh-cn_topic_0196219184_p55095411516"></a>即单个SSL证书可以同时绑定多个域名。</p>
-        <p id="zh-cn_topic_0000001215817231_zh-cn_topic_0000001124518721_zh-cn_topic_0196219184_zh-cn_topic_0195832373_zh-cn_topic_0110865441_p499935813920"><a name="zh-cn_topic_0000001215817231_zh-cn_topic_0000001124518721_zh-cn_topic_0196219184_zh-cn_topic_0195832373_zh-cn_topic_0110865441_p499935813920"></a><a name="zh-cn_topic_0000001215817231_zh-cn_topic_0000001124518721_zh-cn_topic_0196219184_zh-cn_topic_0195832373_zh-cn_topic_0110865441_p499935813920"></a>最多可以支持100个域名。</p>
+        <p id="zh-cn_topic_0000001215817231_zh-cn_topic_0000001124518721_zh-cn_topic_0196219184_zh-cn_topic_0195832373_zh-cn_topic_0110865441_p499935813920"><a name="zh-cn_topic_0000001215817231_zh-cn_topic_0000001124518721_zh-cn_topic_0196219184_zh-cn_topic_0195832373_zh-cn_topic_0110865441_p499935813920"></a><a name="zh-cn_topic_0000001215817231_zh-cn_topic_0000001124518721_zh-cn_topic_0196219184_zh-cn_topic_0195832373_zh-cn_topic_0110865441_p499935813920"></a>最多可以支持250个域名。</p>
         </td>
         </tr>
         <tr id="zh-cn_topic_0000001215817231_zh-cn_topic_0000001124518721_zh-cn_topic_0196219184_zh-cn_topic_0195832373_zh-cn_topic_0110865441_row899945813915"><td class="cellrowborder" valign="top" width="23.46%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0000001215817231_zh-cn_topic_0000001124518721_zh-cn_topic_0196219184_zh-cn_topic_0195832373_zh-cn_topic_0110865441_p18999105816397"><a name="zh-cn_topic_0000001215817231_zh-cn_topic_0000001124518721_zh-cn_topic_0196219184_zh-cn_topic_0195832373_zh-cn_topic_0110865441_p18999105816397"></a><a name="zh-cn_topic_0000001215817231_zh-cn_topic_0000001124518721_zh-cn_topic_0196219184_zh-cn_topic_0195832373_zh-cn_topic_0110865441_p18999105816397"></a>泛域名</p>
@@ -116,7 +116,7 @@
 
     4.  设置“域名数量“：
         -   “域名类型“选择“单域名“和“泛域名“时，域名数量限制为1个。
-        -   “域名类型“选择“多域名“时，域名数量范围为“2\~100“。域名数量须满足以下条件：
+        -   “域名类型“选择“多域名“时，域名数量范围为“2\~250“。域名数量须满足以下条件：
 
             -   **主域名**数量固定为1个
             -   **附加单域名**数量≥1个（当证书类型为OV、OV Pro时，**附加单域名**数量+**附加泛域名**数量≥1）
@@ -128,7 +128,16 @@
 
         证书有效期从证书最终签发的时间开始计算，到期后，需要重新购买并完成证书申请流程。
 
-    6.  设置“购买量“：设置购买的证书个数。
+    6.  （可选）在“企业项目“下拉列表中选择您所在的企业项目。
+
+        企业项目针对企业用户使用，只有开通了企业项目的客户，或者权限为企业主帐号的客户才可见。
+
+        如需使用该功能，请[开通企业管理功能](https://support.huaweicloud.com/usermanual-em/em_am_0008.html)。企业项目是一种云资源管理方式，企业项目管理服务提供统一的云资源按项目管理，以及项目内的资源管理、成员管理。
+
+        >![](public_sys-resources/icon-note.gif) **说明：** 
+        >“default“为默认企业项目，帐号下原有资源和未选择企业项目的资源均在默认企业项目内。
+
+    7.  设置“购买量“：设置购买的证书个数。
 
 5.  确认参数配置无误后，在页面右下角，单击“立即购买“。
 
